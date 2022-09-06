@@ -6,6 +6,8 @@
 Write-Output "Downloading and installing Chocolatey"
 Invoke-WebRequest -useb community.chocolatey.org/install.ps1 | Invoke-Expression
 
+
+$email_github =  Read-Host -Prompt "Please enter your Github email used for ssh key gen"
 Write-Output "Configuring Chocolatey"
 choco feature enable -n allowGlobalConfirmation
 
@@ -53,8 +55,8 @@ pyenv install --quiet 3.10.5 3.9.12
 pyenv global 3.10.5
 
 Write-Output "Generating SSH key"
-ssh-keygen -C tim.esnouf@flaik.com -P '""' -f "$HOME/.ssh/id_rsa"
-cat $HOME/.ssh/id_rsa.pub | clip
+ssh-keygen -C $email_github -P '""' -f "$HOME/.ssh/id_rsa"
+Get-Content $HOME/.ssh/id_rsa.pub | clip
 
 Write-Output "Your SSH key has been copied to the clipboard"
 Write-Output "Please open your github settings and copy this new key."

@@ -10,6 +10,12 @@ Set-ExecutionPolicy RemoteSigned -Force
 iwr -useb github_raw_link_to_setup.ps1_file | iex
 ```
 
+Current example
+
+``` ps1
+iwr -useb https://raw.githubusercontent.com/tim-flaik/tim-flaik/main/windows_setup/setup.ps1 | iex
+```
+
 - Open Github and sign in
 - Settings > SSH NEw Key
 - Copy clipboard contents to that (may need to accept RSA)
@@ -18,3 +24,5 @@ iwr -useb github_raw_link_to_setup.ps1_file | iex
 ```ps1
 ssh -T git@github.com
 ```
+
+This should return a verification that you are connected.  Onto Part 2
