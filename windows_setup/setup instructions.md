@@ -27,4 +27,12 @@ ssh -T git@github.com
 
 This should return a verification that you are connected.  Onto Part 2 we will set up a test python environment and register with github.
 
+## Part 2
 
+run powershell script setup_checks.ps1
+
+``` ps1
+.\setup_checks.ps1
+```
+
+This creates a basic project, add a virtual environment, initialises a git repository and opens it up in VS Code so you can check that git is working.  If happy close VSCode and continue the script - it will clean itself up.
