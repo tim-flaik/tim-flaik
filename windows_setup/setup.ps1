@@ -29,6 +29,17 @@ choco pin add -n googlechrome
 choco install vscode
 choco install notepadplusplus
 choch install autohotkey
+choco install firefox
+choco install microsoft-teams
+choco install zoom
+choco install microsoft-windows-terminal
+choco install slack
+choco install spotify
+choco install thunderbird
+choco install sql-server-management-studio
+choco install sonos-controller
+choco install bitwarden
+choco install bitwarden-chrome
 
 refreshenv
 
