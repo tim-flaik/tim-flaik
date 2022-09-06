@@ -25,4 +25,6 @@ iwr -useb https://raw.githubusercontent.com/tim-flaik/tim-flaik/main/windows_set
 ssh -T git@github.com
 ```
 
-This should return a verification that you are connected.  Onto Part 2
+This should return a verification that you are connected.  Onto Part 2 we will set up a test python environment and register with github.
+
+
