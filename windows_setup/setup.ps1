@@ -40,6 +40,7 @@ choco install sql-server-management-studio
 choco install sonos-controller
 choco install bitwarden
 choco install bitwarden-chrome
+choco install plexamp
 
 refreshenv
 
