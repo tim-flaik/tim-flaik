@@ -41,6 +41,9 @@ choco install sonos-controller
 choco install bitwarden
 choco install bitwarden-chrome
 choco install plexamp
+choco install visualstudio2022community
+choco install mysql.workbench
+choco install insomnia-rest-api-client
 
 refreshenv
 
