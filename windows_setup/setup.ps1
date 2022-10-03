@@ -44,6 +44,8 @@ choco install plexamp
 choco install visualstudio2022community
 choco install mysql.workbench
 choco install insomnia-rest-api-client
+choco install sql-server-2019
+choco install sqltoolbelt ## sams
 
 refreshenv
 

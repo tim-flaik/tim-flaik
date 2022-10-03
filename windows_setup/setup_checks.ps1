@@ -31,7 +31,7 @@ git init
 code .
 
 
-
+123
 
 Write-Host "You should have had a VSCode window open with an initialised git repository $ Hello Workd"
 Read-Host -Prompt "Press any key to continue and tear down the test or CTRL+C to quit"
