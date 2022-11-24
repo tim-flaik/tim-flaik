@@ -7,7 +7,7 @@ Write-Output "Downloading and installing Chocolatey"
 Invoke-WebRequest -useb community.chocolatey.org/install.ps1 | Invoke-Expression
 
 
-$email_github =  Read-Host -Prompt "Please enter your Github email used for ssh key gen"
+$email_github = Read-Host -Prompt "Please enter your Github email used for ssh key gen"
 Write-Output "Configuring Chocolatey"
 choco feature enable -n allowGlobalConfirmation
 
@@ -26,6 +26,7 @@ choco install googlechrome --ignore-checksums
 choco pin add -n googlechrome
 
 ## installs
+Write-Output "Installing more Chocolatey Packages -- yum yum"
 choco install vscode
 choco install notepadplusplus
 choch install autohotkey
@@ -35,7 +36,7 @@ choco install zoom
 choco install microsoft-windows-terminal
 choco install slack
 choco install spotify
-choco install thunderbird
+# choco install thunderbird ## nah not for me
 choco install sql-server-management-studio
 choco install sonos-controller
 choco install bitwarden
@@ -45,7 +46,9 @@ choco install visualstudio2022community
 choco install mysql.workbench
 choco install insomnia-rest-api-client
 choco install sql-server-2019
-choco install sqltoolbelt ## sams
+choco install sqltoolbelt ## test at the moment
+choco install toggl
+choco install whois
 
 refreshenv
 
@@ -77,3 +80,8 @@ Get-Content $HOME/.ssh/id_rsa.pub | clip
 
 Write-Output "Your SSH key has been copied to the clipboard"
 Write-Output "Please open your github settings and copy this new key."
+
+Write-Host    "Installing powershell snippets into local repository"
+
+$ModuleScript = $PSScriptRoot + "\powershellModuleInstall.ps1"
+. $ModuleScript
