@@ -11,7 +11,8 @@ Write-Host "If this test works out install script has been pretty good."
 if (Test-Path -Path $test_project_name) {
     Write-host "Ahh this file exists - exiting the script now so you can check setup."
     Exit
-} else {
+}
+else {
     mkdir $test_project_name
 }
 
@@ -30,11 +31,9 @@ git init
 # open for viewing pleasure and check git is initialising
 code .
 
-
-123
-
-Write-Host "You should have had a VSCode window open with an initialised git repository $ Hello Workd"
-Read-Host -Prompt "Press any key to continue and tear down the test or CTRL+C to quit"
+Write-Host "You should have had a VSCode window open with an initialised git repository $ Hello World"
+Write-Host "Please close the VS Code Window before coming back here"
+Read-Host -Prompt "Press ENTER to continue and tear down the test or CTRL+C to quit"
 
 # tear it down again
 Set-Location $Desktop
