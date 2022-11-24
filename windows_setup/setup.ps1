@@ -7,7 +7,7 @@ Write-Output "Downloading and installing Chocolatey"
 Invoke-WebRequest -useb community.chocolatey.org/install.ps1 | Invoke-Expression
 
 
-$email_github = Read-Host -Prompt "Please enter your Github email used for ssh key gen"
+
 Write-Output "Configuring Chocolatey"
 choco feature enable -n allowGlobalConfirmation
 
@@ -49,6 +49,7 @@ choco install sql-server-2019
 choco install sqltoolbelt ## test at the moment
 choco install toggl
 choco install whois
+choco install brave # web borwser says it private - I'm skeptical but hey why not another chromium based browser
 
 refreshenv
 
@@ -74,14 +75,27 @@ pyenv update
 pyenv install --quiet 3.10.5 3.9.12
 pyenv global 3.10.5
 
-Write-Output "Generating SSH key"
-ssh-keygen -C $email_github -P '""' -f "$HOME/.ssh/id_rsa"
-Get-Content $HOME/.ssh/id_rsa.pub | clip
+$gitHub = Read-Host "Enter your email to generate a GitHub Key - else press ENTER?"
+if ($gitHub) {
+    $email_github = Read-Host -Prompt "Please enter your Github email used for ssh key gen"
+    Write-Output "Generating SSH key"
+    ssh-keygen -C $email_github -P '""' -f "$HOME/.ssh/id_rsa"
+    Get-Content $HOME/.ssh/id_rsa.pub | clip
+    Write-Output "Your SSH key has been copied to the clipboard"
+    Write-Output "Please open your github settings and copy this new key."  
+}
+else {
+    Write-Warning -Message "No Github key generated."
+}
 
-Write-Output "Your SSH key has been copied to the clipboard"
-Write-Output "Please open your github settings and copy this new key."
+
+
 
 Write-Host    "Installing powershell snippets into local repository"
 
 $ModuleScript = $PSScriptRoot + "\powershellModuleInstall.ps1"
 . $ModuleScript
+
+# Cmon you fool - don't run this each itme - you'll get errors
+# just of the simple upgrade - in case you forgot
+# choco upgrade all
