@@ -2,7 +2,7 @@
 
 just a place to keep setting sync files etc..
 
-Package MAnagement done by [Chocolaty](https://docs.chocolatey.org/en-us/)
+Package Management done by [Chocolaty](https://docs.chocolatey.org/en-us/)
 
 To upgrade all 
 
