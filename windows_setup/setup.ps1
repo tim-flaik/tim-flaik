@@ -28,15 +28,15 @@ choco pin add -n googlechrome
 ## installs
 Write-Output "Installing more Chocolatey Packages -- yum yum"
 choco install vscode
+choco install 1password
 choco install notepadplusplus
-choch install autohotkey
+chocO install autohotkey
 choco install firefox
 choco install microsoft-teams
 choco install zoom
 choco install microsoft-windows-terminal
 choco install slack
 choco install spotify
-# choco install thunderbird ## nah not for me
 choco install sql-server-management-studio
 choco install sonos-controller
 choco install bitwarden
@@ -49,7 +49,7 @@ choco install sql-server-2019
 choco install sqltoolbelt ## test at the moment
 choco install toggl
 choco install whois
-choco install brave # web borwser says it private - I'm skeptical but hey why not another chromium based browser
+choco install brave # web brOwser says it private - I'm skeptical but hey why not another chromium based browser
 
 refreshenv
 
