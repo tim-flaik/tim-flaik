@@ -50,6 +50,7 @@ choco install sqltoolbelt ## test at the moment
 choco install toggl
 choco install whois
 choco install brave # web brOwser says it private - I'm skeptical but hey why not another chromium based browser
+choco install claude
 
 refreshenv
 
