@@ -1,0 +1,8 @@
+# Visual Studio local state - was tracked by mistake in a public repo
+.vs/
+*.suo
+*.user
+
+# OS noise
+Thumbs.db
+desktop.ini
